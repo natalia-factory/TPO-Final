@@ -1,0 +1,322 @@
+/* ---------------------------------------- */
+/* ------ ESTILO DE LA PÁGINA HOME -------- */
+/* ---------------------------------------- */
+
+/* ------ RESET GENERAL ------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* --------- HEADER ----------- */
+header{
+    height: 75px;
+    background: rgb(151, 55, 132);
+    padding:0 50px ;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    text-transform: uppercase;
+    color: #fff;
+}
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s; 
+    padding: 0px 20px 0 0;
+}
+
+/* --------- BANNER ---------- */
+
+#banner{
+    padding: 0 50px;
+    background-image: url(./Counseling.png);
+    height: 55vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  
+}
+
+#banner::before{
+    content: '';
+    background: rgba(147, 122, 143, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 55vh;
+    left: 0;
+}
+
+.contenido-banner{
+    position: relative;
+    color: #fff;
+    width: 100%;
+    height:430px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin:auto;
+}
+
+.contenido-banner h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 0px; 
+
+}
+.contenido-banner h2{
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.boton-info{
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid white;
+    padding: 10px 20px ;
+    align-self: baseline; 
+    transition: all 0.4s;
+    margin-top: 15vh;
+    display: inline-block;
+}
+
+.boton-info:hover{
+ background: rgb(153, 89, 141);
+}
+
+/* --------- SOBRE NOSOTROS --------- */
+
+.cards{
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.cards .card img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: none;
+    border-radius: 80%;
+    box-shadow: 0px 0px 30px -5px black;
+}
+/* --------------- TRANSFORMACIÓN -------------- */
+/* - Se agranda la foto 1 cuando pasa el mouse - */
+
+.cards .card img:hover{
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+}
+
+.cards .card h4{
+    padding: 0 0 50px;
+}
+.titulo{
+        color: rgb(137, 71, 130);
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+} 
+
+.boton-nosotros{
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 10px 20px ;
+    transition: all 0.4s;
+    margin-left: 95vh; 
+    background: rgb(153, 89, 141);
+    display: inline-block;
+}
+
+.boton-nosotros:hover{
+ background: rgb(103, 96, 102);
+ color:#fff;
+}
+
+/* ------ SECCION BLOG -------- */
+
+#blog{
+    padding: 0px 10px;
+    margin-top: 50px;
+    margin-bottom: 1px;
+    background-image: url(./blog3.png);
+    height: 60vh;
+    background-size: cover;
+}
+
+#blog::before{
+    content: '';
+    background: rgba(147, 122, 143, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    left: 0;
+}
+
+.contenido-blog{
+    position: relative;
+    color: #fff;
+    width: 100%;
+    height:430px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.contenido-blog h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 0px; 
+    display: flex;
+}
+.contenido-blog h2{
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+    display: flex;
+}
+.boton-blog{
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid white;
+    padding: 10px 20px ;
+    align-self: baseline; 
+    transition: all 0.4s;
+    margin-top: 15vh;
+    margin-left: 90vh;
+    display: inline-block;
+}
+.boton-blog:hover{
+ background: rgb(153, 89, 141);
+}
+
+/* 445px para MOBILE. 768px para TABLETS. 1024px para LAPTOP */
+/* --------- RESPONSIVE --- (TABLETS: 768px) ------- */
+/* ---------------- FOOTER ----------------- */
+
+ul{
+    list-style: none;
+    padding-left: 0;
+  }
+
+  footer{
+    background-color: rgb(151, 55, 132);
+    color: #f2f2f2;
+    line-height: 1;
+  }
+
+  footer a{
+    text-decoration: none;
+    color: #eee;
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
+
+  .ft-title{
+    color: rgb(238, 236, 236);
+    font-family: 'Asap', sans-serif;
+    font-size: 1.375rem;
+    padding-bottom: 0.625rem;
+  }
+   
+  body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .container{
+    flex: 1;
+  }
+   
+  .ft-main{
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ft-main-item{
+    padding: 1.25rem;
+    min-width: 12.5rem;
+  }
+   
+  @media only screen and (min-width: 29.8125rem){
+    .ft-main {
+        justify-content: space-around;
+    }
+  }
+
+  @media only screen and (min-width: 77.5rem ){
+    .ft-main {
+        justify-content: space-evenly;
+    }
+  }
+   
+  form{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  input[type="email"]{
+    border: 0;
+    padding: 0.625rem;
+    margin-top: 0.3125rem;
+  }
+
+  input[type="submit"]{
+    background-color: #00d188;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    padding: 0.625rem 0.9375rem;
+    margin-top: 0.3125rem;
+  }
+   
+  .ft-social{
+    padding: 0 1.875rem 1.25rem;
+  }
+
+  .ft-social-list{
+    display: flex;
+    justify-content: center;
+    border-top: 1px #777 solid;
+    padding-top: 1.25rem;
+  }
+
+  .ft-social-list li{
+    margin: 0.5rem;
+    font-size: 1.25rem;
+  }
+   
+  .ft-legal {
+    padding: 0.9375rem 1.875rem;
+    background-color: #333;
+  }
+
+  .ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  .ft-legal-list li {
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+  }

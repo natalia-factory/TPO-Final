@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./contacto2.css" TYPE="text/css">
+<!-- Agregando un favicon a la página -->    
+    <link rel="icon" type="image/x-icon" href="./favicon2.png">
+<!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--FUENTES:ASAP REGULAR 400 ITALIC-->
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap" rel="stylesheet">
+    <link src="faq.js">
+    <script src="https://kit.fontawesome.com/b8eb031949.js" crossorigin="anonymous"></script>
+    <title>Contacto</title>
+    <script type="text/javascript">
+      function validar(){
+        var form = document.form;
+        if (form.contacto_name.value == 0){
+          alert("Debe completar el Nombre");
+          form.contacto_name.value ="";
+          form.contacto_name.focus();
+          return false;
+        }
+        if (form.contacto_cell.value == 0){
+          alert("Debe completar el Telefono");
+          form.contacto_cell.value ="";
+          form.contacto_cell.focus();
+          return false;
+        }
+
+        if (form.contacto_mail.value == 0){
+          alert("Debe completar el Email");
+          form.contacto_mail.value ="";
+          form.contacto_mail.focus();
+          return false;
+        }
+
+        if (form.contacto_mensaje.value == 0){
+          alert("Debe escribir el mensaje");
+          form.contacto_mensaje.value ="";
+          form.contacto_mensaje.focus();
+          return false;
+        }
+        alert("Datos enviados correctamente");
+        form.submit();
+      }
+    </script>
+</head>
+
+<!---------------------------------------------------------->
+<!-------------  DISEÑO DE LA PÁGINA HOME HTML ------------->
+<!---------------------------------------------------------->
+
+<!-- HEADER Y MENU -->
+
+<body>
+  <header>
+    <h2 class="logo">Counselors</h2>
+    <nav class="menu" id="my menu">
+        <a href="./index.html">Home</a>
+        <a href="./nosotros.html">Sobre Nosotros</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contacto2.html">Contacto</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+    </nav>
+</header>
+
+<!-- FORMULARIO -->
+
+  <div id="box" class="box">
+    <form id="formulario" name="form" action="#" method="POST" onsubmit="validar();">
+      <legend id="legend">Comienza a avanzar hoy. <br>Escribinos</legend>
+        </br>
+        <ul>
+            <label for="name">Nombre:</label>
+        </br>
+              <input type="text" id="name" name="contacto_name">
+        </br>      
+             <label for="name">Celular:</label>
+        </br>
+              <input type="text" id="cell" name="contacto_cell">  
+        </br>    
+              <label for="mail">Email:</label>
+        </br>
+              <input type="text" id="mail" name="contacto_mail">
+        </br>
+              <label for="msg">Mensaje:</label>
+        </br>
+              <textarea id="msg" name="contacto_mensaje"></textarea>
+        </ul>
+       <!-- ultimo --> 
+        </br>
+        <button onclick="validar();"> Enviar</button>
+    </form>
+ 
+    <div id="info">
+      <ul>
+        <li><i class="fa-brands fa-whatsapp"></i><span> (+54)911 3427-3203</span></li>
+        <li><i class="fa-regular fa-envelope-open"></i> clr.amestoy@gmail.com</li>
+        <li><i class="fa-solid fa-business-time"></i> Lunes a Viernes de 8:30 a 21hs</li>
+        <li><i class="fa-solid fa-location-dot"></i><span><a href="https://goo.gl/maps/CouFNZ5xSf2mJXKe9"> Av.Triunvirato 3436, CABA, Buenos Aires.</a></span></li>
+        <li></li>
+
+<!-- IFRAME GOOGLE MAPS -->
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.833997513406!2d-58.4700178!3d-34.583066699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb60cb53c96f1%3A0x1d7c16e5a9cb944d!2sAv%20Triunvirato%203426%2C%20C1427AAU%20CABA!5e0!3m2!1ses-419!2sar!4v1665880428280!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </ul>
+    </div>
+  </div>
+  
+<!-- PREGUNTAS FRECUENTES -->
+
+  <div id="acordeon">
+    <details open="true" class="details">
+      <summary>¿Qué puede hacer el Counseling por mi?</summary>
+      Acompañarte en tu camino, dolores, conflictos, proyectos, y desarrollo.</br>
+      Contarás con un espacio  de aceptación incondicional donde podrás recuperar tu congruencia interior </br>
+      y desplegar tu potencial.
+     </details>
+    </br>
+     <details>
+      <summary>¿Dónde son las sesiones?</summary>
+      Virtuales por Zoom o presenciales en Villa Ortúzar.
+     </details>
+    </br>
+     <details>
+      <summary>¿Quién puede hacer Counseling?</summary>
+      Cualquier persona que sienta la necesidad de ser acompañada en algún proceso, crisis
+     </br> toma de decisiones, etc. También es posible hacer Counseling en conjunto con </br>
+     otras terapias o si está bajo tratamiento psicológico.
+     </details>
+    </br>
+     <details>
+      <summary>¿Qué problemas trata el Counseling?</summary>
+      Nos enfocamos en la persona, y no en el problema. Cuando la persona logra su equilibrio </br>
+     puede afrontar mejor todo tipo de problemas. </br>
+     <ol id="problemas">
+      <li>Toma de decisiones</li>
+      <li>Discriminación y Bullying</li>
+      <li>Crisis Multipotenciales</li>
+      <li>Afrontar cambios vitales</li>
+      <li>Angustia del despertar</li>
+      <li>Tecno Estrés</li>
+      <li>Dependencia emocional</li>
+      <li>Habilidades de afrontamiento</li>
+      <li>Relaciones tóxicas</li>
+     </ol>
+     </details>
+    </br>
+     <details>
+      <summary>¿Qué diferencias tiene con el psicoanálisis?</summary>
+      En el Enfoque Centrado en la Persona, consideramos que la única persona que puede </br>
+      hacer un análisis es usted. Nadie sabe mas de su vida y su mundo que usted.</br>
+      Nuestro trabajo es facilitarle el acceso a su propia sabiduría interna. </br>
+      No le diremos qué hacer, nos abocamos a la tarea de proveerle un espacio único </br>
+       para que recupere su autodeterminación innata, y usted mismo sabrá qué hacer. </br>
+     
+     </details>
+  </div>
+
+<!-- FORMULARIO -->
+
+  <footer id="footer">
+  <section class="ft-main">
+    <div class="ft-main-item">
+      <h2 class="ft-title">Nosotros</h2>
+      <ul>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Información académica</a></li>
+        <li><a href="#">Clientes corportativos</a></li>
+        <li><a href="#">Formación complementaria</a></li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Recursos</h2>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">eBooks</a></li>
+        <li><a href="#">Talleres</a></li>
+        <li><a href="#">Investigación</a></li>
+      </ul>
+    </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title">Suscripción</h2>
+      <p>Entérate de nuevos talleres, artículos y más.</p>
+      <form>
+        <input type="email" name="email" placeholder="Ingrese su email">
+        <input type="submit" value="Subscribirse">
+      </form>
+    </div>
+  </section>
+ 
+<!------- FOOTER SOCIAL ------>
+
+  <section class="ft-social">
+    <ul class="ft-social-list">
+      <li><a href="https://t.me/consultoriapsicologica"><i class="fa-brands fa-telegram"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/counselord/"><i class="fa-brands fa-linkedin"></i></a></li>
+    </ul>
+  </section>
+ 
+<!------- FOOTER LEGAL ------->
+
+  <section class="ft-legal">
+    <ul class="ft-legal-list">
+      <li><a href="#">Téminos &amp; Condiciones</a></li>
+      <li><a href="#">Política de Privacidad</a></li>
+      <li>&copy; 2022 Copyright - Grupo 15 - Codo a Codo</li>
+    </ul>
+  </section>
+ 
+ 
+</footer>
+    <script>
+        let answers=document.querySelectorAll(".accordion");
+        answers.forEach((event)=>{
+            event.addEventListener('click',()=>{
+                if(event.classList.contains("active")){
+                    event.classList.remove("active");
+                }
+                else{
+                    event.classList.add("active");
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>
