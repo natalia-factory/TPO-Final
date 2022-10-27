@@ -7,10 +7,9 @@ function findAllPosts(){
     fetch('https://jsonplaceholder.typicode.com/posts')
   .then((response) => response.json())
   .then((json) => {
-    console.log(json[0])
-    var miArray = new Array(json)
-    let fistTen = miArray.slice(0, )
-    startDependencies(fistTen)
+    // Genero una lista de 3 objetos para no imprimir los 100 posteos del json
+    var miArray = new Array(json[0], json[1], json[2], json[3], json[4])
+    startDependencies(miArray)
   })
 }
 
@@ -19,23 +18,23 @@ function startDependencies(json){
     printPosts(posts)
 }
 function printPosts(posts){
-    posts.forEach(element => {
-        createPost(element)
-    });
+    for (let index = 0; index < posts.length; index++) {
+        createPost(posts[index], index)
+    }
 }
 
-function createPost(element){
+function createPost(element, index){
     let container = document.getElementById('postsContainer')
     let article = document.createElement('article')
-    let post = ""
-    post = '<div class="post">'
-    post+='<img src="../imgBlog/post1.jpeg" alt="" class="image">'
+    let post = ''
+    post+='<div class="post">'
+    post+='<img src="../imgBlog/post'+index+'.jpg" alt="" class="image">'
     post+='<div class="date">'
     post+='<i class="far fa-clock"></i>'
     post+='<span>20 oct, 2022</span>'
     post+='</div>'
     post+='<h3 class="title">'+element.title+'</h3>'
-    post+='<p class="text">'+ element.body+'</p>'
+    post+='<p class="text">'+element.body+element.body+element.body+element.body+'</p>'
     post+='<div class="links">'
     post+='<a href="#" class="user">'
     post+='<i class="far fa-user"></i>'
@@ -51,7 +50,7 @@ function createPost(element){
     post+='</a>'
     post+='</div>'
     post+='</div>'
-    article.append(post)
+    article.insertAdjacentHTML('beforeend', post)
     postList.appendChild(article)
     container.appendChild(postList)
     
