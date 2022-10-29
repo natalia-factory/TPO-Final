@@ -28,7 +28,7 @@ function createPost(element, index){
     let article = document.createElement('article')
     let post = ''
     post+='<div class="post">'
-    post+='<img src="../imgBlog/post'+index+'.jpg" alt="" class="image">'
+    post+='<img src="./imgBlog/post'+index+'.jpg" alt="" class="image">'
     post+='<div class="date">'
     post+='<i class="far fa-clock"></i>'
     post+='<span>20 oct, 2022</span>'
